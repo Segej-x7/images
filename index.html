@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Галерея изображений</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-images"></i> GitHub Галерея</h1>
+            <p class="subtitle">Автоматическая галерея изображений из репозитория GitHub</p>
+            <div class="controls">
+                <button id="refreshBtn" class="btn">
+                    <i class="fas fa-sync-alt"></i> Обновить галерею
+                </button>
+                <div id="info" class="info">Загрузка...</div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Контейнер для отображения изображений -->
+            <div id="gallery" class="gallery">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Загрузка изображений...
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Сайт автоматически обновляется при загрузке новых изображений в репозиторий GitHub.</p>
+        </footer>
+    </div>
+
+    <!-- Модальное окно для увеличенного просмотра -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
